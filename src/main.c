@@ -6,19 +6,20 @@
 int main()
 {
     dstring* dstr = DSTRING();
-    puts("\nadd");
-    dstradds(dstr,"s-a-b");
+    dstrcpy(dstr,"welcome");
+    dstradds(dstr," all");
 
-
-    printf("\n---  %d",dstrfind(dstr,"p"));
-
+    puts("\n");
     for(int i=0;i<dstrlen(dstr);i++)
     {
-        printf("\n%c\n",dstrat(dstr,i));
+        printf("%c",dstrat(dstr,i));
     }
+    printf("\nfind e to %d pos",dstrfind(dstr,"e"));
+    puts("\n");
 
+    dstrcpy(dstr,"hello word");
+    dstrsubn(dstr,6,4);
     puts(dstrtos(dstr));
-    puts("\nfree");
     dstrfree(dstr);
     return 0;
 }

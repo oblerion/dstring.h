@@ -2,7 +2,7 @@
 #define DSTRING_H
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
+//#include <string.h>
 struct e_string
 {
     char car;
