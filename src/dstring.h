@@ -16,18 +16,18 @@ typedef struct
     struct e_string* ptr;
 }dstring;
 
-dstring* DSTRING();
-void dstrprint(dstring* dstr);
-int dstrlen(dstring* dstr);
-void dstraddc(dstring* dstr,char c);
-void dstradds(dstring* dstr,char* s);
-void dstrdel(dstring* dstr,int pos);
-char dstrat(dstring* dstr,int id);
-void dstrcpy(dstring* dstr,char* s);
-void dstrsub(dstring* dstr,int pos);
-void dstrsubn(dstring* dstr,int pos,int n);
-char* dstrtos(dstring* dstr);
-int dstrfind(dstring* dstr,char* s);
-void dstrclear(dstring* dstr);
-void dstrfree(dstring* dstr);
+dstring* DSTRING();                         //constructor
+void dstrprint(dstring* dstr);              //debug print string
+int dstrlen(dstring* dstr);                 //get lenght 
+void dstraddc(dstring* dstr,char c);        //add char to end
+void dstradds(dstring* dstr,char* s);       //add string to end
+void dstrdel(dstring* dstr,int pos);        //remove char at pos
+char dstrat(dstring* dstr,int id);          //get char at id
+void dstrcpy(dstring* dstr,char* s);        //clear and copy string
+void dstrsub(dstring* dstr,int pos);        //dstr = all after pos
+void dstrsubn(dstring* dstr,int pos,int n); //dstr = n char after pos 
+char* dstrtos(dstring* dstr);               //create char* with dstr
+int dstrfind(dstring* dstr,char* s);        //get pos of string s
+void dstrclear(dstring* dstr);              //clear string
+void dstrfree(dstring* dstr);               //free memory
 #endif
